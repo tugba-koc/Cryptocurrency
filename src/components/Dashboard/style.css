@@ -1,0 +1,37 @@
+.dashboardLine {
+  font-size: 24px;
+  font-weight: 580;
+  color: #111111;
+}
+
+.blue {
+  background-color: #2e5bff;
+}
+
+.purple {
+  background-color: #8c54ff;
+}
+
+.orange {
+  background-color: #f7c137;
+}
+
+.wrapper {
+  height: 120px;
+  color: white;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.explain {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1020px) {
+  .wrapper {
+    font-size: 24px;
+  }
+}
+

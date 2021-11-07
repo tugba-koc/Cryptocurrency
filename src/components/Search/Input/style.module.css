@@ -1,0 +1,10 @@
+.input {
+  border-radius: 8px;
+  height: 38px;
+  border: 1px solid #000;
+  transition: 0.3ms linear;
+}
+
+.input:focus {
+  border-color: rgb(77, 134, 240);
+}
