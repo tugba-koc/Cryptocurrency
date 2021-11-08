@@ -1,7 +1,7 @@
 import React from "react";
-import ChangePercent from "./ChangePercent/ChangePercent";
-import Price from "./Price/Price";
-import Time from "./Time/Time";
+import ChangePercent from "../ChangePercent";
+import Price from "../Price";
+import Time from "../Time";
 import "./style.css";
 import axios from "axios";
 
@@ -13,7 +13,7 @@ function DashboardContainer() {
 
   const fetchesData = async () => {
     const basePoint = "https://api.binance.com/";
-    const symbol = "?symbol=LTCBTC";
+    const symbol = "?symbol=ETHBTC";
 
     const averagePriceAPI = basePoint + "api/v3/avgPrice" + symbol;
     const changePercentAPI = basePoint + "api/v1/ticker/24hr" + symbol;
@@ -23,17 +23,16 @@ function DashboardContainer() {
     const getChangePercent = await axios.get(changePercentAPI);
     const getServerTime = await axios.get(serverTimeAPI);
 
-    axios
-      .all([getAveragePrice, getChangePercent, getServerTime])
-      .then(
-        axios.spread((...responses) => {
-          setAveragePrice(responses[0].data.price);
-          setChangePercent(responses[1].data.priceChangePercent);
-          setServerTime(responses[2].data.serverTime);
-        })
-      )
-      setCheckData(true);
+    axios.all([getAveragePrice, getChangePercent, getServerTime]).then(
+      axios.spread((...responses) => {
+        setAveragePrice(responses[0].data.price);
+        setChangePercent(responses[1].data.priceChangePercent);
+        setServerTime(responses[2].data.serverTime);
+      })
+    );
+    setCheckData(true);
   };
+
 
   React.useEffect(() => {
     setInterval(() => {
@@ -50,7 +49,7 @@ function DashboardContainer() {
         </div>
         <div className="col-4 mx-2">
           <ChangePercent changePercent={changePercent} checkData={checkData} />
-        </div> 
+        </div>
         <div className="col-4 mx-2">
           <Time serverTime={serverTime} checkData={checkData} />
         </div>

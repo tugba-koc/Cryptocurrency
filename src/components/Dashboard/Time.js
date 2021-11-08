@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.css";
+import "./Container/style.css";
 
 function Time({ serverTime, checkData }) {
   return (

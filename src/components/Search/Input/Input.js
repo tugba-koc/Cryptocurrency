@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./style.module.css";
 
-function Input() {
-  const [text, setText] = React.useState("");
+function Input({text, setText}) {
+
   return (
     <div className="w-100">
       <input
