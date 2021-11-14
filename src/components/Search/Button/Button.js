@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Button({ showFilteredList }) {
+function Button({ showFilteredList }) { 
   return (
     <div className="w-100 ms-3">
       <button
