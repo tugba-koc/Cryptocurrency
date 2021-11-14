@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function GetWeek() {
+function GetWeek() { 
   
   // days between two dates
   var getDaysArray = function (start, end) {
