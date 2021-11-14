@@ -5,16 +5,16 @@ import ContainerResults from "../components/Results/Container/ContainerResults";
 import axios from "axios";
 import ContainerSearch from "../components/Search/Container/ContainerSearch";
 
-function App() {
-  const [results, setResults] = useState([]);
-  const [filteredList, setFilteredList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isFiltered, setIsFiltered] = useState(false);
+function App() { 
+  const [results, setResults] = useState([]); // trades of BNBBTC 
+  const [filteredList, setFilteredList] = useState([]); // filteredList of results acc to text
+  const [isLoading, setIsLoading] = useState(false); // to check if the results are loading
+  const [isClicked, setIsClicked] = useState(false); // to check if the button is clicked or not 
 
   // background color changed to light pink
   document.body.style = "background: #f4f6fc";
 
-  // fetching data from the API
+  // fetching data from the API ,isLoading is true after fetching data
   const fetchData = async () => {
     const response = await axios.get(
       "https://api.binance.com/api/v3/trades?symbol=BNBBTC"
@@ -23,6 +23,7 @@ function App() {
     setIsLoading(true);
   };
 
+  // fetching data from the API on component mount, interval of 1 second
   useEffect(() => {
     setInterval(() => {
       fetchData();
@@ -34,12 +35,12 @@ function App() {
       <ContainerDashboard />
       <Graph />
       <ContainerSearch
-        setIsFiltered={setIsFiltered}
+        setIsClicked={setIsClicked}
         setFilteredList={setFilteredList}
         results={results}
       />
       <ContainerResults
-        isFiltered={isFiltered}
+        isClicked={isClicked}
         filteredList={filteredList}
         results={results}
         isLoading={isLoading}

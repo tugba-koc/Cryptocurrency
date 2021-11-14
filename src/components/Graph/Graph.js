@@ -16,25 +16,34 @@ function Graph() {
   const [totalValue, setTotalValue] = React.useState([]);
 
   const fetchData = async () => {
+
+    // constant to hold the data 
     const basePoint = "https://api.binance.com/";
 
-    const symbol = `?symbol=BNBBTC&limit=90&interval=1d&startTime=1614027599000&endTime=1622408399000`;
+    // constant to hold the data
+    const symbol = `?symbol=BNBBTC&limit=98&interval=1d&startTime=1614027599000&endTime=1622505599000`;
 
-    const averagePriceAPI = basePoint + "api/v3/klines" + symbol;
+    // get the url to fetch the data, historical data
+    const historicalPriceAPI = basePoint + "api/v3/klines" + symbol;
 
-    const response = await axios.get(averagePriceAPI);
+    // response from the api
+    const response = await axios.get(historicalPriceAPI);
 
+    // historical data
     setTotalValue(response.data);
   };
 
+  // useEffect to fetch the data
   React.useEffect(() => {
     fetchData();
   }, []);
 
+  // an array for the data of the graph
   const data = [];
 
+  // loop for the data of XAxis and YAxis
   if (totalValue.length > 0) {
-    for (let i = 0; i < 90; i += 5) {
+    for (let i = 0; i < 98; i += 5) {
       data.push({
         name: "",
         value: totalValue[i][4],
@@ -81,8 +90,9 @@ function Graph() {
           />
           <Tooltip />
           />
-          <YAxis tickSize={10} tickLine={false} tickCount={6} />
+          <YAxis tickSize={10} tickLine={false}  />
           <Area
+          strokeWidth ="3"
             dot={{ stroke: "#8884d8", strokeWidth: 2, fill: "white" }}
             dataKey="value"
             stroke="#8884d8"
