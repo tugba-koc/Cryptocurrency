@@ -1,7 +1,7 @@
 import React from "react";
 import "./Container/style.css";
 
-function ChangePercent({ changePercent, checkData }) {
+function ChangePercent({ changePercent, checkData }) { 
   return (
     <div className="wrapper orange d-flex flex-column ps-3 justify-content-center">
       {checkData
