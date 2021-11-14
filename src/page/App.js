@@ -5,7 +5,7 @@ import ContainerResults from "../components/Results/Container/ContainerResults";
 import axios from "axios";
 import ContainerSearch from "../components/Search/Container/ContainerSearch";
 
-function App() { 
+function App() {  
   const [results, setResults] = useState([]); // trades of BNBBTC 
   const [filteredList, setFilteredList] = useState([]); // filteredList of results acc to text
   const [isLoading, setIsLoading] = useState(false); // to check if the results are loading
