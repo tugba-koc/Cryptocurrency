@@ -25,7 +25,7 @@ function ContainerDashboard() {
     const getAveragePrice = await axios.get(averagePriceAPI);
     const getChangePercent = await axios.get(changePercentAPI);
     const getServerTime = await axios.get(serverTimeAPI);
-
+ 
     // set the data
     axios.all([getAveragePrice, getChangePercent, getServerTime]).then(
       axios.spread((...responses) => {
