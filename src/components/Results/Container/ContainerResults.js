@@ -3,7 +3,7 @@ import "./style.css";
 import ItemResult from "../ItemResult/ItemResult";
 import Spinner from "../../Spinner/Spinner";
 
-function ContainerResults({ results, isLoading, filteredList, isClicked }) { 
+function ContainerResults({ results, isLoading, filteredList, isClicked }) {  
   
   // we check if the results are loading or not
   if (!isLoading) {
