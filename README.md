@@ -1,4 +1,4 @@
-## Live Demo [click](https://github.com/facebook/create-react-app)
+## Live Demo [click](https://github.com/facebook/create-react-app) with Netlify
 
 ## Getting Started with Create React App
 
