@@ -14,7 +14,7 @@ import GetWeek from "./GetWeek";
 
 function Graph() {
   const [totalValue, setTotalValue] = React.useState([]);
-
+ 
   const fetchData = async () => {
 
     // constant to hold the data 
