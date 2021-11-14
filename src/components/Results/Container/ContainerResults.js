@@ -3,27 +3,40 @@ import "./style.css";
 import ItemResult from "../ItemResult/ItemResult";
 import Spinner from "../../Spinner/Spinner";
 
-function ContainerResults({ results, isLoading, filteredList }) {
-
+function ContainerResults({ results, isLoading, filteredList, isFiltered }) {
   if (!isLoading) {
-    return <Spinner />;
+    return <Spinner />; 
+  } else if (isFiltered && filteredList.length === 0) {
+    return (
+      <div>
+        {" "}
+        <i>Herhangi bir sonuç bulunamadı.</i>{" "}
+      </div>
+    );
   }
   return (
     <div>
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">PRICE</th>
-            <th scope="col">QTY</th>
-            <th scope="col">QUOTEQTY</th>
-            <th scope="col">TIME</th>
+            <th className="col-3 ps-5">ID</th>
+            <th className="col-2">PRICE</th>
+            <th className="col-2">QTY</th>
+            <th className="col-3">QUOTEQTY</th>
+            <th className="col-2 ms-5">TIME</th>
           </tr>
         </thead>
-
-        {results.slice(0, 8).map((result, index) => (
-          <ItemResult result={result} key={index} />
-        ))}
+        {isFiltered
+          ? filteredList
+              .slice(0, 8)
+              .map((result, index) => (
+                <ItemResult result={result} key={index} />
+              ))
+          : results
+              .slice(0, 8)
+              .map((result, index) => (
+                <ItemResult result={result} key={index} isLoading={isLoading} />
+              ))}
       </table>
     </div>
   );

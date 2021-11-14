@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./style.module.css";
+import "./style.css";
 
 function Button({ showFilteredList }) {
   return (
-    <div className="w-100">
+    <div className="w-100 ms-3">
       <button
         type="button"
         onClick={showFilteredList}
-        className={`btn btn-primary ${styles.button} ms-3 w-100 text-start ps-5`}
+        className= "btn btn-primary button w-100 text-start ps-4"
       >
         Filter
       </button>

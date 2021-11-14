@@ -1,5 +1,5 @@
 .dashboardLine {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 580;
   color: #111111;
 }
@@ -19,8 +19,8 @@
 .wrapper {
   height: 120px;
   color: white;
-  font-weight: 800;
-  font-size: 36px;
+  font-weight: 400;
+  font-size: 42px;
 }
 
 .explain {
@@ -34,4 +34,3 @@
     font-size: 24px;
   }
 }
-

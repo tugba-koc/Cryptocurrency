@@ -1,17 +1,19 @@
 .section {
-    border-bottom: 20px solid #f4f6fc;
+    border-bottom: 12px solid #f4f6fc;
     background-color: white;
 }
-
+ 
 td {
     margin-top: 0;
     font-weight: 800;
     color: #111111;
     font-size: 14px;
+    word-wrap:break-word;
+    white-space: normal
 }
 
 
-.itemId {
+tbody tr td.itemId {
     font-weight: 600;
     color: #797979;
     font-size: 14px;

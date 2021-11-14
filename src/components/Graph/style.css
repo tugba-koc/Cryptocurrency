@@ -1,0 +1,13 @@
+.weeks {
+    padding-left: 80px;
+    background-color: #f4f6fc;
+    color: #C4C4C4;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+    .weeks {
+        font-size: 9px;
+    }
+}
+    

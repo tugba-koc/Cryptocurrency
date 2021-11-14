@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "./style.module.css";
+import "./style.css";
 
-function Input({text, setText}) {
-
+function Input({ text, setText }) {
   return (
     <div className="w-100">
       <input
-        className={`${styles.input} w-100 ps-5 pe-3`}
+        className="input w-100 me-5 ps-4 pe-2"
         type="search"
         name="text"
         value={text}

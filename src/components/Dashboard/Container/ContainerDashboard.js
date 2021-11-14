@@ -5,7 +5,7 @@ import Time from "../Time";
 import "./style.css";
 import axios from "axios";
 
-function DashboardContainer() {
+function ContainerDashboard() {
   const [averagePrice, setAveragePrice] = React.useState([]);
   const [changePercent, setChangePercent] = React.useState([]);
   const [serverTime, setServerTime] = React.useState([]);
@@ -13,7 +13,7 @@ function DashboardContainer() {
 
   const fetchesData = async () => {
     const basePoint = "https://api.binance.com/";
-    const symbol = "?symbol=ETHBTC";
+    const symbol = "?symbol=BNBBTC";
 
     const averagePriceAPI = basePoint + "api/v3/avgPrice" + symbol;
     const changePercentAPI = basePoint + "api/v1/ticker/24hr" + symbol;
@@ -41,7 +41,7 @@ function DashboardContainer() {
   }, []);
 
   return (
-    <div>
+    <div className="mb-4">
       <div className="dashboardLine mb-3 ">Dashboard</div>
       <div className="d-flex flex-row justify-content-evenly mx-auto w-75">
         <div className="col-4 mx-2">
@@ -58,4 +58,4 @@ function DashboardContainer() {
   );
 }
 
-export default DashboardContainer;
+export default ContainerDashboard;
