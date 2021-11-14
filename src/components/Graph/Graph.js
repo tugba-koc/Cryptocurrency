@@ -39,7 +39,7 @@ function Graph() {
   }, []);
 
   // an array for the data of the graph
-  const data = [];
+  const data = []; 
 
   // loop for the data of XAxis and YAxis
   if (totalValue.length > 0) { 
