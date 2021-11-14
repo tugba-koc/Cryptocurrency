@@ -42,7 +42,7 @@ function Graph() {
   const data = [];
 
   // loop for the data of XAxis and YAxis
-  if (totalValue.length > 0) {
+  if (totalValue.length > 0) { 
     for (let i = 0; i < 98; i += 5) {
       data.push({
         name: "",
