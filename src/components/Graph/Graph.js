@@ -67,7 +67,7 @@ function Graph() {
             top: 100,
             right: 30,
             left: 30,
-            bottom: -30,
+            bottom: -10,
           }}
         >
           <defs>

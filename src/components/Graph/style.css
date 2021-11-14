@@ -3,6 +3,7 @@
     background-color: #f4f6fc;
     color: #C4C4C4;
     font-weight: 600;
+    margin-top: -20px;
 }
 
 @media screen and (max-width: 900px) {
