@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 30px 10%;
+  padding: 30px 10% 60px;
 }
 
 textarea:focus,
