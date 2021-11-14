@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function ItemResult({ result }) {
+function ItemResult({ result }) { 
   return (
     <tbody className="section-item">
       <tr>
