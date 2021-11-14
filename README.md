@@ -1,5 +1,17 @@
 ## Live Demo >>> [click](https://github.com/facebook/create-react-app) 
 
+## About
+
+This project is done by using Binance API. Especially, the API is used to get the data of the coin (BNBBTC). 
+
+The project consists of three parts:
+
+1. Dashboard
+2. Chart
+3. Table
+
+Each part is implemented by using Binance API's different endpoint. In order to fetch the data, the project uses the axios library.
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
