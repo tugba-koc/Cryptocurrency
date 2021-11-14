@@ -1,7 +1,7 @@
 import React from "react";
 import "./Container/style.css";
 
-function Time({ serverTime, checkData }) {
+function Time({ serverTime, checkData }) { 
   return (
     <div className="wrapper purple d-flex flex-column ps-3 justify-content-center">
       {checkData
