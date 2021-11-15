@@ -79,13 +79,6 @@ lerna-debug.log
 /website-deploy-key
 /website-deploy-key.pub
 
-# react icons
-node_modules
-dist
-lib
-module
-*.log
-*.tgz
 
 .yarn/cache
 .yarn/install-state.gz
@@ -185,3 +178,9 @@ typings/
 
 # Generated types
 /types
+
+
+# recharts
+.Rproj.user
+.Rhistory
+.RData
