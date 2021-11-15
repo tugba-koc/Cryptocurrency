@@ -1,5 +1,7 @@
 ## Live Demo >>> [click](https://cryptocurrency-for-bnb-btc.herokuapp.com/) 
 
+![Cryptocurrency](https://user-images.githubusercontent.com/71395416/141763590-51afd606-a05b-4289-a84a-d63bebe33a6e.gif)
+
 ## About
 
 This project is done by using Binance API. Especially, the API is used to get the data of the coin (BNBBTC). 
